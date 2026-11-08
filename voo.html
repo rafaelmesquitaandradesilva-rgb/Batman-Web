@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/x-icon" href="batman3.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bat Helicpeter</title>
+
+	<style>
+		
+		body {
+			font-family: Arial, sans-serif;
+			background-color: black;
+			background-image: url(batman1.jpg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-attachment: fixed;
+			background-size: cover;
+			max-width: 100%;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		h1 {
+			background-color: #111111;
+			color: #f1c40f;
+			text-align: center;
+			font-size: 35px;
+			font-family: Arial, sans-serif;
+			letter-spacing: 7px;
+			text-shadow: 4px 4px 5px #000000,
+						5px 5px 8px #f39c12;
+			border-bottom: 3px solid #f39c12;
+		}
+
+		h3 {
+			display: block;
+			text-align: center;
+			max-width: 900px;
+			font-size: 21px;
+			font-family: Oswald, sans-serif;
+			margin: 0 auto;
+		}
+
+		#menu {
+			width: fit-content;
+			max-width: 990px;
+			color: white;
+			font-family: Rockwell, serif;
+			font-size: 12px;
+			text-align: center;
+			background-color: black;
+			box-shadow: 5px 10px 30px;
+			display: block;
+			margin: 0 auto;
+			padding: 6px 12px;
+		}
+
+		#menu a {
+			color: #f39c12;
+			text-decoration: none;
+		}
+
+		#menu a:hover {
+			color: #f1c40f;
+		}
+
+		#heli {
+  			position: relative;
+
+  			animation: helicoptero 5s;
+  			animation-iteration-count: infinite;
+			animation-direction: alternate;
+
+  			width: 350px; 
+  			height: auto;
+
+  			will-change: transform;
+		}
+
+		@keyframes helicoptero {
+    		0% {
+        	transform: translate3d(-300px, 50px, 0) scale(0.5) rotate(2deg);
+    	}
+
+    		50% {
+        	transform: translate3d(500px, 100px, 0) scale(0.8) rotate(1deg);
+    	}
+    		100% {
+        	transform: translate3d(-900px, 150px, 0) scale(0.5) rotate(-2deg);
+    	}
+	}
+
+	</style>
+
+</head>
+<body id="Início">
+
+	<h1 align="center" class="animate__animated animate__fadeInUp">Helicóptero do Batman sobrevoando Gotham City</h1>
+
+	<div id="menu">
+		<a href="index.html">
+			<h3 align="center">Voltar</h3>
+		</a>
+	</div>
+
+	<br><br>
+
+	<img src="helicopeterobat.png" width="500" height="500" id="heli">
+
+</body>
+</html>
