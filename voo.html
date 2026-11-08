@@ -8,7 +8,6 @@
 	<title>Bat Helicpeter</title>
 
 	<style>
-		
 		body {
 			font-family: Arial, sans-serif;
 			background-color: black;
@@ -18,23 +17,9 @@
 			background-attachment: fixed;
 			background-size: cover;
 			max-width: 100%;
+			overflow-x: hidden;
 		}
 
-		html {
-			scroll-behavior: smooth;
-		}
-
-		h1 {
-			background-color: #111111;
-			color: #f1c40f;
-			text-align: center;
-			font-size: 35px;
-			font-family: Arial, sans-serif;
-			letter-spacing: 7px;
-			text-shadow: 4px 4px 5px #000000,
-						5px 5px 8px #f39c12;
-			border-bottom: 3px solid #f39c12;
-		}
 
 		h3 {
 			display: block;
@@ -68,38 +53,59 @@
 			color: #f1c40f;
 		}
 
+		.arena {
+			position: relative;
+			width: 100%;
+			height: 600px;
+			pointer-events: none;
+		}
+
 		#heli {
-  			position: relative;
-
-  			animation: helicoptero 5s;
-  			animation-iteration-count: infinite;
-			animation-direction: alternate;
-
-  			width: 350px; 
-  			height: auto;
-
-  			will-change: transform;
+			position: absolute;
+			top: 50px;
+			left: 100px;
+			width: 450px; 
+			height: auto;
+			animation: helicoptero 9s infinite alternate ease-in-out;
+			will-change: transform;
 		}
 
 		@keyframes helicoptero {
-    		0% {
-        	transform: translate3d(-300px, 50px, 0) scale(0.5) rotate(2deg);
-    	}
+			0% {
+				transform: translate3d(0px, 0px, 0) scale(0.5) rotate(-3deg) scaleX(1);
+			}
+			50% {
+				transform: translate3d(500px, 120px, 0) scale(0.85) rotate(4deg) scaleX(1);
+			}
+			100% {
+				transform: translate3d(950px, 20px, 0) scale(0.5) rotate(-2deg) scaleX(-1);
+			}
+		}
 
-    		50% {
-        	transform: translate3d(500px, 100px, 0) scale(0.8) rotate(1deg);
-    	}
-    		100% {
-        	transform: translate3d(-900px, 150px, 0) scale(0.5) rotate(-2deg);
-    	}
-	}
+		#bat {
+			position: absolute;
+			top: 20px;
+			left: 50px;
+			width: 300px;
+			height: auto;
+			animation: morcego 6s infinite alternate ease-in-out;
+			will-change: transform;
+		}
 
+		@keyframes morcego {
+			0% {
+				transform: translate3d(100px, 150px, 0) scale(0.4) rotate(-8deg) scaleX(1);
+			}
+			50% {
+				transform: translate3d(600px, 50px, 0) scale(0.7) rotate(6deg) scaleX(1);
+			}
+			100% {
+				transform: translate3d(1100px, 120px, 0) scale(0.5) rotate(-5deg) scaleX(-1);
+			}
+		}
 	</style>
-
 </head>
 <body id="Início">
-
-	<h1 align="center" class="animate__animated animate__fadeInUp">Helicóptero do Batman sobrevoando Gotham City</h1>
 
 	<div id="menu">
 		<a href="index.html">
@@ -107,9 +113,12 @@
 		</a>
 	</div>
 
-	<br><br>
+	<br>
 
-	<img src="helicopeterobat.png" width="500" height="500" id="heli">
+	<div class="arena">
+		<img src="helicopeterobat.png" id="heli" alt="Batcóptero">
+		<img src="humanbat.png" id="bat" alt="Morcego Humano">
+	</div>
 
 </body>
 </html>
